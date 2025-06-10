@@ -4,7 +4,7 @@ export default function Nosotros(){
   return(
     <div style={{width:"50%", height:"50%"}}>
       <div style={{width:"100%", height:"50%"}}>
-        <img src="/tefi/images/fotoNosotros.jpeg" alt="" style={{height:"100%", width:"auto"}} />
+        <img src="/images/fotoNosotros.jpeg" alt="" style={{height:"100%", width:"auto"}} />
       </div>
       <div style={{width:"100%", height:"50%"}}>
         <TypeWriter 
