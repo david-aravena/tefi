@@ -6,30 +6,32 @@ export default function CardComponent({component, index, onclick }) {
       <div className="containerCardUp">
         
       </div>
+
+      <div style={{position:"absolute", top:0, left:0, width:"100%", height: "100%", display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center"}}>
+        <div style={{width:"50%", aspectRatio: "1/1", backgroundColor:"white", borderRadius:"50%", border:"8px solid var(--green-tefi)"}}>
+
+        </div>
+        <h3 style={{color:"var(--black-tefi)"}}>{component.name}</h3>
+        <p style={{color:"var(--black-tefi)", fontSize:"14px"}}>{component.description}</p>
+        
+      </div>
+
       <div className="containerCardDown">
-        <div>
-          <p style={{color:"black"}}>{component.name}</p>
-        </div>
-        <div style={{width:"50%"}}>
-          <button style={{width:"100%"}} onClick={() => onclick(component)}>ver</button>
-        </div>
+        <button 
+          onClick={() => onclick(component)}
+          style={{
+            backgroundColor:"var(--green-tefi)", 
+            border:"none", 
+            color:"white", 
+            padding:"8px 1rem", 
+            borderRadius:"1rem", 
+            fontSize:"1rem",
+            zIndex:"9"
+          }}>
+          ver
+        </button>
       </div>
 
-      <div style={{
-        width: "120px",
-        height: "120px",
-        position: 'absolute',
-        top: '50%',
-        left: '50%',
-        transform: 'translate(-50%, -50%)',
-        border: "2px solid red",
-        borderRadius: "50%",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center"
-      }}>
-
-      </div>
     </div>
   )
 }

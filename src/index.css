@@ -5,5 +5,12 @@
 }
 
 body{
-  background-color: #66c3b826;
+  background-color: #ffffff;
+}
+
+:root {
+  --black-tefi: #2a1e35;
+  --black-tefi-rgba: rgba(42, 30, 53, 0.2);
+  --green-tefi: #71c9bf;
+  --shadow-tefi: 0 4px 12px 0 var(--black-tefi-rgba);
 }

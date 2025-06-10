@@ -11,7 +11,8 @@ export default function ShowComponent({close, children}) {
           alignItems:"center",
           background: "rgba(255,255,255,0.4)",
           backdropFilter: "blur(10px)",       
-          WebkitBackdropFilter: "blur(10px)"
+          WebkitBackdropFilter: "blur(10px)",
+          zIndex:"999"
         }}>
           <div style={{position:"absolute", top:0, right:0}}>
             <button onClick={() => close()}>CERRAR</button>
