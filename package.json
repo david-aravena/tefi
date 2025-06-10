@@ -1,6 +1,7 @@
 {
   "name": "tefiportafolio",
   "private": true,
+  "homepage": "https://david-aravena.github.io/tefi",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
