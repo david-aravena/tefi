@@ -73,10 +73,15 @@ export default function Home({width}){
           </div>
         </div>
 
-        <div>
-          <Navbar variant="criollito" />
-          <Navbar variant="black" />
-          <Navbar variant="white" />
+        <div className="containerAnimatedLogos">
+          <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+            <h2>Logos animados</h2>
+          </div>
+          <div>
+            <Navbar variant="criollito" />
+            <Navbar variant="black" />
+            <Navbar variant="white" />
+          </div>
         </div>
       </div>
 

@@ -14,7 +14,6 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
         <div>
           <Header padding={paddingHeaderFooter} />
         </div>
@@ -26,11 +25,6 @@ function App() {
             </Routes>
           </Suspense>
         </div>
-
-        <div style={{ display: 'flex', justifyContent: 'flex-end', padding: paddingHeaderFooter, width:"100%" }}>
-          <ContactIcons marginIcons="0 8px" />
-        </div>
-      </div>
     </BrowserRouter>
   )
 }

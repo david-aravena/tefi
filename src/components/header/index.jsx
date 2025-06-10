@@ -7,7 +7,7 @@ export default function Header({ padding }) {
   const location = useLocation();
 
   return (
-    <div style={{ display: "flex", flexDirection: "row", justifyContent:"space-between", alignItems:"center", width:"100vw", padding: padding, gap: "1rem", backgroundColor:"white"}}>
+    <div style={{ display: "flex", flexDirection: "row", justifyContent:"space-between", alignItems:"center", width:"100%", padding: padding, gap: "1rem", backgroundColor:"white"}}>
 
       <div>
         <div style={{width:"150px", height:"auto"}}>

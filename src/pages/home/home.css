@@ -1,4 +1,4 @@
-.containerComponents{
+.containerComponents, .containerAnimatedLogos{
   width: 95%;
   height: 50%;
   margin: auto;
@@ -19,7 +19,7 @@
 }
 
 @media (max-width: 1000px) {
-  .containerComponents {
+  .containerComponents, .containerAnimatedLogos {
     width: 100%;
   }
 
