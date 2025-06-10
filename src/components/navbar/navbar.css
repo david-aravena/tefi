@@ -1,0 +1,155 @@
+.navbarContainerBlack{
+  display: flex;
+  background-color: black;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2rem 0;
+  padding: 0 1rem;
+}
+
+.navbarContainerWhite{
+  display: flex;
+  background-color: white;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  border: 2px solid blue;
+  border-radius: 10px;
+}
+
+.navbarContainerCriollito{
+  display: flex;
+  background-color: yellow;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+    margin: 2rem 0;
+}
+
+.animatedLogoContainerTc{
+  width: 250px;
+  display: flex;
+  align-items: center;
+
+}
+
+.animatedLogoContainerDevsafio{
+  width: 270px;
+  display: flex;
+  align-items: center;
+}
+
+
+
+.animatedLogoContainerCriollito{
+  width: 270px;
+  display: flex;
+  align-items: center;
+}
+
+.loadingDevsafio {
+  width: 159px;
+  height: 53px;
+  background-position: 0 0;
+  background-size: 159px 845px; /* 16 frames * 53px */
+  background-repeat: no-repeat;
+  background-image: url("./sprites/devsafioIcon.png");
+  animation: slideDevsafio 2s steps(16) infinite;
+}
+
+.loadingCriollito {
+  width: 188px;
+  height: 94px;
+  background-size: 188px 6016px; /* 94 * 64 */
+  animation: slideCriollitoSmallDevice 3s steps(63) infinite;
+  /* width: 250px; */
+  /* height: 125px; */
+  background-position: 0 0;
+  /* background-size: 250px 8000px; */
+  background-repeat: no-repeat;
+  background-image: url("./sprites/spriteCriollito.png");
+  /* animation: slideCriollito 4s steps(63) infinite; */
+}
+
+
+.loadingTc {
+  width: 125px;                         /* 250 / 2 */
+  height: 125px;                        /* 250 / 2 */
+  background-position: 0 0;
+  background-size: 125px 5875px;       /* 11750 / 2 */
+  background-repeat: no-repeat;
+  background-image: url("./sprites/tcIcon.png");
+  animation: slideTc 3s steps(46) infinite;             /* Puedes quitar esto si solo era para debug */
+}
+
+@keyframes slideTc {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 0 -5750px;    /* 125px * 46 = 5750px (no 5875) */
+  }
+  100% {
+    background-position: 0 -5750px;    /* 125px * 46 = 5750px (no 5875) */
+  }
+}
+
+
+
+
+@keyframes slideDevsafio {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 0 -795px; /* 53px * (16 - 1) */
+  }
+  100% {
+    background-position: 0 -795px;
+  }
+}
+
+
+
+@keyframes slideCriollitoSmallDevice {
+  0% {
+    background-position: 0 0;
+  }
+  75% {
+    background-position: 0 -5922px; /* 94 * (64 - 1) */
+    
+  }
+  100% {
+    background-position: 0 -5922px; /* 94 * (64 - 1) */
+    
+  }
+}
+
+.menuContainer{
+  padding: 1rem;
+}
+
+p{
+  color: white;
+  margin: 0 1rem;
+}
+
+.linksContainer{
+    display: block;
+    display: flex;
+  }
+
+  .hamburguerContainer{
+    display: none;
+  }
+
+@media (max-width: 800px) {
+  .hamburguerContainer{
+    display: block;
+  }
+
+  .linksContainer{
+    display: none;
+  }
+
+}

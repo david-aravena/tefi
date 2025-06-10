@@ -1,0 +1,28 @@
+.containerHome{
+  width: 50%;
+  height: 50%;
+  display: flex;
+  overflow: auto;
+  padding: 2rem 0;
+  background-color: #f5f4f4;
+}
+
+.containerLogos, .containerComponents{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (max-width: 1000px) {
+  .containerHome {
+    width: 100%;
+  }
+  
+  .containerLogos, .containerComponents {
+    width: 100%;
+    height: 40%;
+  }
+}
+
