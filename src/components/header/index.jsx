@@ -11,9 +11,9 @@ export default function Header({ padding }) {
 
       <div>
         <div style={{width:"150px", height:"auto"}}>
-          <Link to={"/"}>
+          <Link to={"/tefi"}>
             <img
-              src="/icons/LogoTefi.png"
+              src="/tefi/icons/LogoTefi.png"
               alt="Logo tefi"
               style={{ width: '100%', height: '100%', objectFit: 'contain' }}
             />
@@ -23,7 +23,7 @@ export default function Header({ padding }) {
 
       {location.pathname !== "/nosotros" && (
         <div>
-          <Link to={"/nosotros"}>
+          <Link to={"/tefi/sobre-mi"}>
             <h2>Nosotros</h2>
           </Link>
         </div>

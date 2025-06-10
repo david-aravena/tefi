@@ -21,8 +21,8 @@ function App() {
         <div style={{ flex: 1, overflow: 'auto', display:"flex", justifyContent:"center", alignItems:"center"}}>
           <Suspense fallback={<div>Cargando...</div>}>
             <Routes>
-              <Route path="/" element={<Home width={isMobile ? "90%" : "75%"} />} />
-              <Route path="/nosotros" element={<Nosotros />} />
+              <Route path="/tefi" element={<Home width={isMobile ? "90%" : "75%"} />} />
+              <Route path="/tefi/sobre-mi" element={<Nosotros />} />
             </Routes>
           </Suspense>
         </div>
