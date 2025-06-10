@@ -39,7 +39,7 @@ export default function Navbar({ variant = 'black' }) {
   } = VARIANTS[variant] || VARIANTS.black
 
   return (
-    <div style={{ fontFamily: 'montserrat' }}>
+    <div>
       <div className={containerClass}>
         <div className={logoClass}>
           <div className={loadingClass}></div>
@@ -49,9 +49,9 @@ export default function Navbar({ variant = 'black' }) {
             <Hamburger color={hamburgerColor} />
           </div>
           <div className="linksContainer">
-            <p style={{ color: linkColor }}>About</p>
-            <p style={{ color: linkColor }}>Contact</p>
-            <p style={{ color: linkColor }}>Home</p>
+            <p style={{ color: linkColor, fontFamily: 'roboto' }}>About</p>
+            <p style={{ color: linkColor, fontFamily: 'roboto' }}>Contact</p>
+            <p style={{ color: linkColor, fontFamily: 'roboto' }}>Home</p>
           </div>
         </div>
       </div>

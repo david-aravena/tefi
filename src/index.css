@@ -14,3 +14,22 @@ body{
   --green-tefi: #71c9bf;
   --shadow-tefi: 0 4px 12px 0 var(--black-tefi-rgba);
 }
+
+a{
+  text-decoration: none;
+}
+
+h2{
+  font-family: 'roboto';
+  color: var(--black-tefi)
+}
+
+h3{
+  font-family: 'roboto-regular';
+  color: var(--black-tefi)
+}
+
+p{
+  font-family: 'roboto-regular';
+  color: var(--black-tefi)
+}
