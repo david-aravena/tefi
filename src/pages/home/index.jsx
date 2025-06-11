@@ -1,58 +1,24 @@
-import { useState } from 'react'
+import { useState, lazy, Suspense } from 'react'
 import CardComponent from './components/card'
 import Navbar from '../../components/navbar'
-import ButtonSpinner from './components/button'
-import Nosotros from '../../components/nosotros'
 import './home.css'
 import ShowComponent from '../../components/showComponent'
+
+const ButtonSpinner = lazy(() => import('./components/button'))
+const ListFiles = lazy(() => import('./../../components/list/'))
 
 export default function Home({width}){
 
   const [components] = useState([
     {
       element: ButtonSpinner, 
-      name:"Botones interactivos",
+      name:"Botones",
       description:"Boton que despliega un loading o ejecuta cualquier funcionalidad al recibir un click."
     },
     {
-      element: ButtonSpinner, 
-      name:"Botones interactivos",
-      description:"Boton que despliega un loading o ejecuta cualquier funcionalidad al recibir un click."
-    },
-    {
-      element: ButtonSpinner, 
-      name:"Botones interactivos",
-      description:"Boton que despliega un loading o ejecuta cualquier funcionalidad al recibir un click."
-    },
-    {
-      element: ButtonSpinner, 
-      name:"Botones interactivos",
-      description:"Boton que despliega un loading o ejecuta cualquier funcionalidad al recibir un click."
-    },
-    {
-      element: ButtonSpinner, 
-      name:"Botones interactivos",
-      description:"Boton que despliega un loading o ejecuta cualquier funcionalidad al recibir un click."
-    },
-    {
-      element: ButtonSpinner, 
-      name:"Botones interactivos",
-      description:"Boton que despliega un loading o ejecuta cualquier funcionalidad al recibir un click."
-    },
-    {
-      element: ButtonSpinner, 
-      name:"Botones interactivos",
-      description:"Boton que despliega un loading o ejecuta cualquier funcionalidad al recibir un click."
-    },
-    {
-      element: ButtonSpinner, 
-      name:"Botones interactivos",
-      description:"Boton que despliega un loading o ejecuta cualquier funcionalidad al recibir un click."
-    },
-    {
-      element: ButtonSpinner, 
-      name:"Botones interactivos",
-      description:"Boton que despliega un loading o ejecuta cualquier funcionalidad al recibir un click."
+      element: ListFiles, 
+      name:"Listas",
+      description:"Listas ordenadas de elementos."
     }
   ])
 
@@ -91,9 +57,10 @@ export default function Home({width}){
 
       {selectedComponent && (
         <ShowComponent close={() => setSelectedComponent(null)}>
-          {selectedComponent === "Botones interactivos" && (
-            <ButtonSpinner />
-          )}
+          <Suspense fallback={<img src="/images/corazonTefi.png" alt="" />}>
+            {selectedComponent === "Botones" && <ButtonSpinner />}
+            {selectedComponent === "Listas" && <ListFiles />}
+          </Suspense>
         </ShowComponent>
       )}
     </>

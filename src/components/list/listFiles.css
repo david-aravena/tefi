@@ -1,0 +1,11 @@
+.containerListFiles{
+  display: flex;
+  flex-direction: column;
+  width:70%;
+}
+
+@media (max-width: 800px){
+  .containerListFiles{
+    width:90%
+  }
+}
