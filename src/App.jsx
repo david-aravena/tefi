@@ -18,7 +18,7 @@ function App() {
           <Header padding={paddingHeaderFooter} />
         </div>
         <div style={{ flex: 1, overflow: 'auto', display:"flex", justifyContent:"center", alignItems:"center"}}>
-          <Suspense fallback={ <img src="/images/corazonTefi.png" alt="" /> }>
+          <Suspense fallback={ <div style={{position:"absolute", top:0, left:0, width:"100%", height:"100%", display:"flex", justifyContent:"center", alignItems:"center"}}><img src="/images/corazonTefi.png" alt="" /> </div> }>
             <Routes>
               <Route path="/" element={<Home width={isMobile ? "90%" : "85%"} />} />
               <Route path="/quienes-somos" element={<Nosotros />} />
