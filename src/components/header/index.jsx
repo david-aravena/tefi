@@ -7,7 +7,7 @@ export default function Header({ padding }) {
   const location = useLocation();
 
   return (
-    <div style={{ display: "flex", flexDirection: "row", justifyContent:"flex-end", alignItems:"center", width:"100%", padding: padding, gap: "1rem", backgroundColor:"rgb(76, 8, 75)", height:"150px"}}>
+    <div style={{ display: "flex", flexDirection: "row", justifyContent:"flex-end", alignItems:"center", width:"100%", padding: padding, gap: "1rem", backgroundColor:"#4e2a6e", height:"150px"}}>
 
       <div style={{position:"absolute", top:15, left:15}}>
         <div style={{
@@ -15,7 +15,7 @@ export default function Header({ padding }) {
           height:"auto", 
           background:"white", 
           borderRadius:"150px", 
-          border:"15px solid rgb(76, 8, 75)",
+          border:"15px solid #4e2a6e",
           padding:"10px",
         }}>
           <Link to={"/"}>

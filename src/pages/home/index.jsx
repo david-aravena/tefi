@@ -29,7 +29,9 @@ export default function Home({width}){
       <div style={{ width: width, backgroundColor:"#f4f3f5" }}>
         <div className="containerComponents">
           <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-            <h3>Componentes</h3>
+            <div style={{background:"white", padding:"1rem", borderRadius:"10px 10px 0 0", boxShadow:"3px -4px 6px 0 rgba(42, 30, 53, 0.1)"}}>
+              <h3>Componentes</h3>
+            </div>
           </div>
 
           <div className="containerListCards">
@@ -41,7 +43,9 @@ export default function Home({width}){
 
         <div>
           <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-            <h3>Logos animados</h3>
+            <div style={{background:"white", padding:"1rem", borderRadius:"10px 10px 0 0", boxShadow:"3px -4px 6px 0 rgba(42, 30, 53, 0.1)"}}>
+              <h3>Logos animados</h3>
+            </div>
           </div>
           <div className="containerAnimatedLogos">
             
