@@ -12,7 +12,7 @@ export default function CardComponent({component, index, onclick }) {
 
         </div>
         <h3 style={{color:"var(--black-tefi)"}}>{component.name}</h3>
-        <p style={{color:"var(--black-tefi)", fontSize:"14px"}}>{component.description}</p>
+        <p style={{color:"var(--black-tefi)", fontSize:"14px", height:"3em"}}>{component.description}</p>
         
       </div>
 

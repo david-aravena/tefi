@@ -20,12 +20,12 @@ a{
 }
 
 h2{
-  font-family: 'roboto';
-  color: var(--black-tefi)
+  font-family: 'roboto-regular';
+  color: var(--black-tefi);
 }
 
 h3{
-  font-family: 'roboto-regular';
+  font-family: 'roboto-light';
   color: var(--black-tefi)
 }
 

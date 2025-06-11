@@ -29,7 +29,7 @@ export default function Home({width}){
       <div style={{ width: width, backgroundColor:"#f4f3f5" }}>
         <div className="containerComponents">
           <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-            <h2>Componentes</h2>
+            <h3>Componentes</h3>
           </div>
 
           <div className="containerListCards">
@@ -41,7 +41,7 @@ export default function Home({width}){
 
         <div>
           <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-            <h2>Logos animados</h2>
+            <h3>Logos animados</h3>
           </div>
           <div className="containerAnimatedLogos">
             
