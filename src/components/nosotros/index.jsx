@@ -17,7 +17,7 @@ export default function Nosotros(){
               <ContactIcons />
             </div>
           </div>
-          <p>
+          <p style={{color:"var(--black-tefi)"}}>
             Somos una familia conformada por un desarrollador web con experiencia en comunicación audiovisual, una animadora digital especializada en animación 2D con trayectoria en diseño (conocida como Tefi) y un bebé que es nuestro motor y fuente de inspiración.<br/>
             <br/>
             Juntos, unimos nuestras habilidades para ofrecer dos servicios pensados especialmente para implementarse en sitios web:<br/>
