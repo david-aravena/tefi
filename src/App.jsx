@@ -21,7 +21,7 @@ function App() {
           <Suspense fallback={ <div style={{position:"absolute", top:0, left:0, width:"100%", height:"100%", display:"flex", justifyContent:"center", alignItems:"center"}}><img src="/images/corazonTefi.png" alt="" /> </div> }>
             <Routes>
               <Route path="/" element={<Home width={isMobile ? "100%" : "85%"} />} />
-              <Route path="/quienes-somos" element={<Nosotros />} />
+              <Route path="/contacto" element={<Nosotros />} />
             </Routes>
           </Suspense>
         </div>

@@ -33,7 +33,7 @@ export default function Home({width}){
             <div style={{padding:"8px 1rem"}}>
               <h3 style={{fontSize:"1.5rem"}}>Componentes</h3>
               <p style={{color:"black", margin:0, padding:"1rem 0"}}> 
-                Un componente es una parte que puedes integrar en tu pagina web o app, para que tu y tus usuarios puedan contar con nuevas funcionalidades que traen una estetica trabajada que se puede adaptar a la imagen que quieras que transmita tu proyecto o negocio.
+                Diseñamos y desarrollamos componentes personalizados para tu web o app, como botones, formularios o menús, entre otros elementos, pensados para adaptarse al estilo y personalidad de tu marca, con un enfoque responsivo y reutilizable.
               </p>
             </div>
             <div style={{display:"flex",  overflow: "auto", padding:"8px 0"}}>
