@@ -27,33 +27,42 @@ export default function Home({width}){
   return(
     <>
       <div style={{ width: width, backgroundColor:"#f4f3f5" }}>
+        
         <div className="containerComponents">
-          <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-            <div style={{background:"white", padding:"1rem", borderRadius:"10px 10px 0 0", boxShadow:"3px -4px 6px 0 rgba(42, 30, 53, 0.1)"}}>
-              <h3>Componentes</h3>
-            </div>
-          </div>
-
           <div className="containerListCards">
-            {components.map((component, index) => (
-              <CardComponent component={component} index={index} onclick={(component) => setSelectedComponent(component.name)} />
-            ))}
+            <div style={{padding:"8px 1rem"}}>
+              <h3 style={{fontSize:"1.5rem"}}>Componentes</h3>
+              <p style={{color:"black", margin:0, padding:"1rem 0"}}> 
+                Un componente es una parte que puedes integrar en tu pagina web o app, para que tu y tus usuarios puedan contar con nuevas funcionalidades que traen una estetica trabajada que se puede adaptar a la imagen que quieras que transmita tu proyecto o negocio.
+              </p>
+            </div>
+            <div style={{display:"flex",  overflow: "auto", padding:"8px 0"}}>
+              {components.map((component, index) => (
+                <CardComponent component={component} index={index} onclick={(component) => setSelectedComponent(component.name)} />
+              ))}
+            </div>
           </div>
         </div>
 
-        <div>
-          <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-            <div style={{background:"white", padding:"1rem", borderRadius:"10px 10px 0 0", boxShadow:"3px -4px 6px 0 rgba(42, 30, 53, 0.1)"}}>
-              <h3>Logos animados</h3>
+
+
+
+        <div className="containerComponents">
+          <div className="containerListCards">
+            <div style={{padding:"8px 1rem"}}>
+              <h3 style={{fontSize:"1.5rem"}}>Logos animados</h3>
+              <p style={{color:"black", margin:0, padding:"1rem 0"}}> 
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus dolorum ex iste explicabo sapiente nihil molestias magni, magnam impedit totam nobis ipsa nam at voluptatum similique nesciunt deleniti voluptate. Molestias?
+              </p>
             </div>
-          </div>
-          <div className="containerAnimatedLogos">
+            <div className="containerAnimatedLogos">
             
             <div>
-              <Navbar variant="criollito" />
               <Navbar variant="black" />
+              <Navbar variant="criollito" />
               <Navbar variant="white" />
             </div>
+          </div>
           </div>
         </div>
       </div>

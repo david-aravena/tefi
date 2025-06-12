@@ -4,31 +4,33 @@
   margin: auto;
   display: flex;
   flex-direction: column;
-  padding: 2rem 0;
+  padding: 1rem 0;
   background-color: #f5f4f4;
 
 }
 
 .containerAnimatedLogos{
   background-color: white;
-  box-shadow: var(--shadow-tefi);
-  padding: 1rem;
   border-radius: 10px;
 }
 
 
 .containerListCards{
   display: flex;
+  flex-direction: column;
   background-color: white;
-  padding: 2rem;
   border-radius: 10px;
   box-shadow: var(--shadow-tefi);
-  overflow: auto;
+  padding: 8px 0;
 }
 
 @media (max-width: 1000px) {
   .containerComponents, .containerAnimatedLogos {
     width: 100%;
+  }
+
+  .containerListCards{
+    border-radius: 0;
   }
 
 }
