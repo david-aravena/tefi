@@ -22,8 +22,10 @@ export default function Nosotros(){
             <br/>
             Juntos, unimos nuestras habilidades para ofrecer dos servicios pensados especialmente para implementarse en sitios web:<br/>
             <br/>
-            1. Logos Animados<br/>
-            2. Componentes<br/>
+            <span style={{ fontWeight: "bold", color:"var(--back-tefi)" }}>
+              1. Logos Animados<br/>
+              2. Componentes<br/>
+            </span>
             <br/>
             Actualmente nos enfocamos exclusivamente en estos dos servicios, lo que nos permite entregar un trabajo detallado, equilibrando con dedicación nuestra vida familiar y creativa.<br/>
             <br/>
@@ -44,6 +46,16 @@ const ContactIcons = ({marginIcons}) => {
           <img
             src="https://static.vecteezy.com/system/resources/thumbnails/024/290/994/small/line-art-mail-button-icon-in-flat-style-vector.jpg"
             alt="email"
+            style={{ width: '50px', height: '50px', objectFit: 'contain', borderRadius: "50px" }}
+          />
+        </a>
+      </div>
+
+      <div>
+        <a href="https://www.webpay.cl/form-pay/288716" target="_blank" rel="noopener noreferrer">
+          <img
+            src="/svg/card.svg"
+            alt="payButton"
             style={{ width: '50px', height: '50px', objectFit: 'contain', borderRadius: "50px" }}
           />
         </a>
