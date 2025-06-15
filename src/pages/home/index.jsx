@@ -1,8 +1,8 @@
 import { useState, lazy, Suspense } from 'react'
 import CardComponent from './components/card'
 import Navbar from '../../components/navbar'
-import './home.css'
 import ShowComponent from '../../components/showComponent'
+import './home.css'
 
 const ButtonSpinner = lazy(() => import('./components/button'))
 const ListFiles = lazy(() => import('./../../components/list/'))
@@ -13,12 +13,14 @@ export default function Home({width}){
     {
       element: ButtonSpinner, 
       name:"Botones",
-      description:"Boton que despliega un loading o ejecuta cualquier funcionalidad al recibir un click."
+      description:"Boton que despliega un loading o ejecuta cualquier funcionalidad al recibir un click.",
+      icon:"/svg/button.svg"
     },
     {
       element: ListFiles, 
       name:"Listas",
-      description:"Listas ordenadas de elementos."
+      description:"Listas ordenadas de elementos con logica propia y funcionalidades incorporadas.",
+      icon: "/svg/list.svg"
     }
   ])
 
