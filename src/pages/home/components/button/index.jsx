@@ -8,6 +8,7 @@ export default function ButtonSpinner(){
     <div 
       style={{
         width:"100px",
+        height:"fit-content",
         backgroundColor:"var(--green-tefi)", 
         padding:"1rem", 
         borderRadius:"0.5rem", 

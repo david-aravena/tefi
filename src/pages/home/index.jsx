@@ -73,7 +73,7 @@ export default function Home({width}){
 
       {selectedComponent && (
         <ShowComponent close={() => setSelectedComponent(null)}>
-          <Suspense fallback={<img src="/images/corazonTefi.png" alt="" />}>
+          <Suspense fallback={<div style={{position:"absolute", top:0, left:0, width:"100%", height:"100%", display:"flex", justifyContent:"center", alignItems:"center"}}><img src="/images/corazonTefi.png" alt="" /> </div>}>
             {selectedComponent === "Botones" && <ButtonSpinner />}
             {selectedComponent === "Listas" && <ListFiles />}
           </Suspense>
@@ -82,3 +82,4 @@ export default function Home({width}){
     </>
   )
 }
+
