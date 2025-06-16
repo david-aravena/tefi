@@ -35,7 +35,8 @@ export default function Home({width}){
             <div style={{padding:"8px 1rem"}}>
               <h3 style={{fontSize:"1.5rem"}}>Componentes</h3>
               <p style={{color:"black", margin:0, padding:"1rem 0"}}> 
-                <span style={{ fontWeight: "bold" }}>¿Qué ofrecemos?:</span> Diseñamos y desarrollamos componentes a medida para tu sitio web o aplicación, como botones, formularios, menús y otros elementos visuales. Cada componente no solo reflejara el estilo y la personalidad de tu marca, sino que también van a ejecutar funciones específicas que mejoraran el uso y la experiencia dentro de tu página. Además, están hechos para reutilizarse fácilmente en distintas secciones, lo que te ahorra tiempo y esfuerzo.
+                <span style={{ fontWeight: "bold" }}>¿Qué ofrecemos?:</span> Diseñamos y desarrollamos componentes a medida para tu sitio web o aplicación, como botones, formularios, menús y otros elementos visuales.
+                Cada componente puede incluir su propia logica y ejecutar funciones que mejoran la interaccion y experiencia de usuario en tu sitio web o app.
               </p>
             </div>
             <div style={{display:"flex",  overflow: "auto", padding:"8px 0"}}>
