@@ -28,14 +28,15 @@ export default function Header({ padding }) {
         </div>   
       </div> 
 
-      {location.pathname !== "/contacto" && (
-        <div>
-          <Link to={"/contacto"}>
-            <h3 style={{color:"white"}}>Contactanos</h3>
-          </Link>
+        <div style={{display:"flex"}}>
+          {location.pathname !== "/contacto" && (
+            <Link to={"/contacto"}>
+              <h3 style={{color:"white"}}>Quienes somos</h3>
+            </Link>
+          )}
         </div>
-      )}
 
     </div>
   );
 }
+
