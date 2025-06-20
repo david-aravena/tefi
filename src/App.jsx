@@ -30,7 +30,7 @@ export default function App() {
               <Route path="/" element={<Home width={isMobile ? "100%" : "85%"} />} />
               <Route path="/contacto" element={<Nosotros />} />
               <Route path="/botones" element={<Buttons />} />
-              <Route path="/listas" element={<Lists />} />
+              <Route path="/listas" element={<Lists isMobile={isMobile} />} />
             </Routes>
           </Suspense>
         </div>

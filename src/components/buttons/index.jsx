@@ -1,9 +1,19 @@
 import { useState } from "react";
+import { Link } from 'react-router';
 import spinner1 from './svg/spinner1.svg'
 
 export default function Buttons(){
   return(
-    <ButtonSpinner />
+    <div style={{display:"flex", flexDirection:"column", alignItems:"center", width:"100%"}}>
+      <ButtonSpinner />
+      <div style={{width:"100%", display:"flex", justifyContent:"flex-end", padding:"0 1rem"}}>
+        <Link to="/listas">
+          <div style={{width:"50px", height:"50px", display:"flex", justifyContent:"center", alignItems:"center"}}>
+            <h3>Listas</h3>
+          </div>
+        </Link>
+      </div>
+    </div>
   )
 }
 
@@ -21,7 +31,7 @@ const ButtonSpinner = () => {
         color:"white", 
         display:"flex", 
         justifyContent:"center",
-        margin:"3rem"
+        margin:"1rem"
       }} 
       onClick={() => setIsClicked(!isClicked)}
     >
