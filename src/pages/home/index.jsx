@@ -1,30 +1,25 @@
-import { useState, lazy, Suspense } from 'react'
+import { useState, Suspense } from 'react'
+import { Link } from 'react-router';
 import CardComponent from './components/card'
 import Navbar from '../../components/navbar'
-import ShowComponent from '../../components/showComponent'
 import './home.css'
-
-const ButtonSpinner = lazy(() => import('./components/button'))
-const ListFiles = lazy(() => import('./../../components/list/'))
 
 export default function Home({width}){
 
   const [components] = useState([
     {
-      element: ButtonSpinner, 
+      url: "/botones", 
       name:"Botones",
       description:"Boton que despliega un loading o ejecuta cualquier funcionalidad al recibir un click.",
       icon:"/svg/button.svg"
     },
     {
-      element: ListFiles, 
+      url: "/listas", 
       name:"Listas",
       description:"Listas ordenadas de elementos con logica propia y funcionalidades incorporadas.",
       icon: "/svg/list.svg"
     }
   ])
-
-  const [selectedComponent, setSelectedComponent] = useState(null);
 
   return(
     <>
@@ -41,7 +36,9 @@ export default function Home({width}){
             </div>
             <div style={{display:"flex",  overflow: "auto", padding:"8px 0"}}>
               {components.map((component, index) => (
-                <CardComponent component={component} index={index} onclick={(component) => setSelectedComponent(component.name)} />
+                <Link to={`${component.url}`}>
+                  <CardComponent component={component} index={index} />
+                </Link>
               ))}
             </div>
           </div>
@@ -70,15 +67,6 @@ export default function Home({width}){
         </div>
       </div>
 
-
-      {selectedComponent && (
-        <ShowComponent close={() => setSelectedComponent(null)}>
-          <Suspense fallback={<div style={{position:"absolute", top:0, left:0, width:"100%", height:"100%", display:"flex", justifyContent:"center", alignItems:"center"}}><img src="/images/corazonTefi.png" alt="" /> </div>}>
-            {selectedComponent === "Botones" && <ButtonSpinner />}
-            {selectedComponent === "Listas" && <ListFiles />}
-          </Suspense>
-        </ShowComponent>
-      )}
     </>
   )
 }

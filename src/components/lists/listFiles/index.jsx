@@ -1,7 +1,6 @@
-import { useState } from 'react';
+import { useState } from "react";
 import {ButtonsAddUpload} from "./ui/buttonsAddUpload/ButtonsAddUpload"
 import {ListSelectionFile} from "./ui/listSelectionFile/ListSelectionFile"
-import "./listFiles.css"
 
 export default function ListFiles(){
 

@@ -10,8 +10,8 @@ export default function Nosotros(){
 
         <div className="containerTextNosotros">
           <div>
-            <div style={{display:"flex", justifyContent:"center"}}>
-              <h3 style={{fontSize:"1.5rem"}}>Contactanos</h3>
+            <div style={{display:"flex", justifyContent:"center", padding:"1rem 0"}}>
+              <h3 style={{fontSize:"1.5rem"}}>Quienes somos</h3>
             </div>
           </div>
           <p style={{color:"var(--black-tefi)"}}>

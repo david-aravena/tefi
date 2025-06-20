@@ -6,6 +6,8 @@ import './App.css'
 
 const Home = lazy(() => import('./pages/home/'));
 const Nosotros = lazy(() => import('./components/nosotros/'));
+const Buttons = lazy(() => import('./components/buttons/'));
+const Lists = lazy(() => import('./components/lists/'));
 
 export default function App() {
 
@@ -27,6 +29,8 @@ export default function App() {
             <Routes>
               <Route path="/" element={<Home width={isMobile ? "100%" : "85%"} />} />
               <Route path="/contacto" element={<Nosotros />} />
+              <Route path="/botones" element={<Buttons />} />
+              <Route path="/listas" element={<Lists />} />
             </Routes>
           </Suspense>
         </div>
