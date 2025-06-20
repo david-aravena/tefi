@@ -10,13 +10,11 @@ export default function Home({width}){
     {
       url: "/botones", 
       name:"Botones",
-      description:"Boton que despliega un loading o ejecuta cualquier funcionalidad al recibir un click.",
       icon:"/svg/button.svg"
     },
     {
       url: "/listas", 
       name:"Listas",
-      description:"Listas ordenadas de elementos con logica propia y funcionalidades incorporadas.",
       icon: "/svg/list.svg"
     }
   ])
@@ -30,8 +28,8 @@ export default function Home({width}){
             <div style={{padding:"8px 1rem"}}>
               <h3 style={{fontSize:"1.5rem"}}>Componentes</h3>
               <p style={{color:"black", margin:0, padding:"1rem 0"}}> 
-                <span style={{ fontWeight: "bold" }}>¿Qué ofrecemos?:</span> Diseñamos y desarrollamos componentes a medida para tu sitio web o aplicación, como botones, formularios, menús y otros elementos visuales.
-                Cada componente puede incluir su propia logica y ejecutar funciones que mejoran la interaccion y experiencia de usuario en tu sitio web o app.
+                <span style={{ fontWeight: "bold" }}>¿Qué ofrecemos?:</span> Diseñamos y desarrollamos componentes a medida para tu sitio web o aplicación, como botones, formularios, menús, listas de elementos, manejadores de bases de datos y otros elementos visuales.
+                Cada componente puede incluir su propia logica, ejecutar funciones y estar conectado a servicios externos. Todo esto para mejorar la interaccion y experiencia de usuario en tu sitio web o app.
               </p>
             </div>
             <div style={{display:"flex",  overflow: "auto", padding:"8px 0"}}>
