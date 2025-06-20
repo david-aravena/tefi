@@ -35,7 +35,7 @@ export default function App() {
           </Suspense>
         </div>
 
-        <div style={{position:"fixed", bottom:0, width:"100vw", background:"#4e2a6e"}}>
+        <div style={{position:"fixed", bottom:0, width:"100vw", background:"#4e2a6e",zIndex:"99999999"}}>
           <div style={{margin:"auto", width: isMobile ? "100%" : "85%", display:"flex", justifyContent:"flex-end"}}>
             <ContactIcons marginIcons="8px" />
           </div>
