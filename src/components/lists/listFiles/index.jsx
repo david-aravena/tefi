@@ -4,7 +4,7 @@ import {ListSelectionFile} from "./ui/listSelectionFile/ListSelectionFile"
 
 export default function ListFiles(){
 
-  const [filesSelected, setFilesSelected] = useState([]);
+  const [filesSelected, setFilesSelected] = useState([{name:"fotografia", size:"10", type:"jpeg"}]);
   const [uploadFilesProgress, setUploadFilesProgress] = useState(null);
 
   const getFilesFromInput = (e) => {

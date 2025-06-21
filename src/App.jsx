@@ -13,6 +13,7 @@ export default function App() {
 
   const isMobile = useIsMobile();
   const paddingHeaderFooter = isMobile ? "0 1rem" : "0 5rem";
+  const mainWidth = isMobile ? "100%" : "85%";
 
   return (
     <BrowserRouter>
@@ -27,10 +28,10 @@ export default function App() {
         }}>
           <Suspense fallback={ <div style={{position:"absolute", top:0, left:0, width:"100%", height:"100%", display:"flex", justifyContent:"center", alignItems:"center"}}><img src="/images/corazonTefi.png" alt="" /> </div> }>
             <Routes>
-              <Route path="/" element={<Home width={isMobile ? "100%" : "85%"} />} />
+              <Route path="/" element={<Home width={mainWidth} />} />
               <Route path="/contacto" element={<Nosotros />} />
-              <Route path="/botones" element={<Buttons />} />
-              <Route path="/listas" element={<Lists isMobile={isMobile} />} />
+              <Route path="/botones" element={<Buttons width={mainWidth} />} />
+              <Route path="/listas" element={<Lists width={mainWidth} />} />
             </Routes>
           </Suspense>
         </div>

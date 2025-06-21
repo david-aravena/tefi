@@ -1,16 +1,18 @@
 import ListFiles from './listFiles'
 import { Link } from 'react-router';
 
-export default function Lists({isMobile}){
+export default function Lists({width}){
   return(
-    <div style={isMobile ? {width:"90%"} : {width:"50%"}}>
-      <ListFiles />
-      <div style={{width:"100%", display:"flex", justifyContent:"flex-start", padding:"0 1rem"}}>
-        <Link to="/botones">
-          <div style={{width:"50px", height:"50px", display:"flex", justifyContent:"center", alignItems:"center"}}>
-            <h3>Botones</h3>
-          </div>
-        </Link>
+    <div style={{width: width, padding:"0 10px"}}>
+      <div style={{
+        width:"100%", 
+        backgroundColor:"white", 
+        boxShadow:"var(--shadow-tefi)", 
+        borderRadius:"10px", 
+        padding:"1rem 1rem", 
+        margin:"1rem 0"
+      }}>
+        <ListFiles />
       </div>
     </div>
   )

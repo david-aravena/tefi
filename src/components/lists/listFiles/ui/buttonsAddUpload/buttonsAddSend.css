@@ -1,6 +1,6 @@
 .containerButtons{
     width: 100%;
-    padding: 1rem 0;
+    padding-bottom: 1rem;
     display: flex;
     justify-content: flex-end;
 }

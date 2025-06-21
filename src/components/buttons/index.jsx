@@ -2,16 +2,20 @@ import { useState } from "react";
 import { Link } from 'react-router';
 import spinner1 from './svg/spinner1.svg'
 
-export default function Buttons(){
+export default function Buttons({width}){
   return(
-    <div style={{display:"flex", flexDirection:"column", alignItems:"center", width:"100%"}}>
-      <ButtonSpinner />
-      <div style={{width:"100%", display:"flex", justifyContent:"flex-end", padding:"0 1rem"}}>
-        <Link to="/listas">
-          <div style={{width:"50px", height:"50px", display:"flex", justifyContent:"center", alignItems:"center"}}>
-            <h3>Listas</h3>
-          </div>
-        </Link>
+    <div style={{width: width, padding:"0 10px"}}>
+      <div style={{
+        width:"100%", 
+        backgroundColor:"white", 
+        boxShadow:"var(--shadow-tefi)", 
+        borderRadius:"10px", 
+        padding:"1rem 1rem", 
+        margin:"1rem 0",
+        display:"flex",
+        justifyContent:"center"
+      }}>
+        <ButtonSpinner />
       </div>
     </div>
   )
