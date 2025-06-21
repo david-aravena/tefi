@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router';
+import { Routes, Route, useLocation, Link } from 'react-router';
 import { Suspense, lazy } from 'react';
 import Header from './components/header'
 import './App.css'
@@ -16,32 +16,35 @@ export default function App() {
   const mainWidth = isMobile ? "100%" : "85%";
 
   return (
-    <BrowserRouter>
-        <div>
-          <Header padding={paddingHeaderFooter} />
-        </div>
-        <div style={{
-          display:"flex", 
-          justifyContent:"center", 
-          alignItems:"center",
-          marginBottom:"5rem"
-        }}>
-          <Suspense fallback={ <div style={{position:"absolute", top:0, left:0, width:"100%", height:"100%", display:"flex", justifyContent:"center", alignItems:"center"}}><img src="/images/corazonTefi.png" alt="" /> </div> }>
-            <Routes>
-              <Route path="/" element={<Home width={mainWidth} />} />
-              <Route path="/contacto" element={<Nosotros />} />
-              <Route path="/botones" element={<Buttons width={mainWidth} />} />
-              <Route path="/listas" element={<Lists width={mainWidth} />} />
-            </Routes>
-          </Suspense>
-        </div>
+    <>
+      <div>
+        <Header padding={paddingHeaderFooter} />
+      </div>
 
-        <div style={{position:"fixed", bottom:0, width:"100vw", background:"#4e2a6e",zIndex:"99999999"}}>
-          <div style={{margin:"auto", width: isMobile ? "100%" : "85%", display:"flex", justifyContent:"flex-end"}}>
-            <ContactIcons marginIcons="8px" />
-          </div>
+      <Navbar width={mainWidth} />
+  
+      <div style={{
+        display:"flex", 
+        justifyContent:"center", 
+        alignItems:"center",
+        marginBottom:"5rem"
+      }}>
+        <Suspense fallback={ <div style={{position:"absolute", top:0, left:0, width:"100%", height:"100%", display:"flex", justifyContent:"center", alignItems:"center"}}><img src="/images/corazonTefi.png" alt="" /> </div> }>
+          <Routes>
+            <Route path="/" element={<Home width={mainWidth} />} />
+            <Route path="/contacto" element={<Nosotros />} />
+            <Route path="/botones" element={<Buttons width={mainWidth} />} />
+            <Route path="/listas" element={<Lists width={mainWidth} />} />
+          </Routes>
+        </Suspense>
+      </div>
+
+      <div style={{position:"fixed", bottom:0, width:"100vw", background:"#4e2a6e",zIndex:"99999999"}}>
+        <div style={{margin:"auto", width: isMobile ? "100%" : "85%", display:"flex", justifyContent:"flex-end"}}>
+          <ContactIcons marginIcons="8px" />
         </div>
-    </BrowserRouter>
+      </div>
+    </>
   )
 }
 
@@ -80,6 +83,39 @@ const ContactIcons = ({marginIcons}) => {
         </a>
       </div>
     </>
+  )
+}
+
+function Navbar({width}) {
+  const location = useLocation();
+
+  if (location.pathname === "/" || location.pathname === "/contacto") return null;
+  return(
+    <div style={{width: width, backgroundColor:"white", boxShadow:"var(--shadow-tefi)", margin:"1rem auto", padding:"1rem", display:"flex"}}>
+      <Link to="/botones">
+        <p style={{
+          backgroundColor: location.pathname === "/botones" ? "gray" : "transparent",
+          padding:"8px", 
+          width:"fit-content", 
+          borderRadius:"4px",
+          color:"var(--black-tefi)"
+        }}>
+          Botones
+        </p>
+      </Link>
+
+      <Link to="/listas">
+        <p style={{
+          backgroundColor: location.pathname === "/listas" ? "gray" : "transparent",
+          padding:"8px", 
+          width:"fit-content", 
+          borderRadius:"4px",
+          color:"var(--black-tefi)"
+        }}>
+          Listas
+        </p>
+      </Link>
+    </div>
   )
 }
 

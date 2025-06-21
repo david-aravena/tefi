@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 
 export default function Lists({width}){
   return(
-    <div style={{width: width, padding:"0 10px"}}>
+    <div style={{width: width}}>
       <div style={{
         width:"100%", 
         backgroundColor:"white", 
