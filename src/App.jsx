@@ -32,7 +32,7 @@ export default function App() {
         <Suspense fallback={ <div style={{position:"absolute", top:0, left:0, width:"100%", height:"100%", display:"flex", justifyContent:"center", alignItems:"center"}}><img src="/images/corazonTefi.png" alt="" /> </div> }>
           <Routes>
             <Route path="/" element={<Home width={mainWidth} />} />
-            <Route path="/contacto" element={<Nosotros />} />
+            <Route path="/quienes-somos" element={<Nosotros />} />
             <Route path="/botones" element={<Buttons width={mainWidth} />} />
             <Route path="/listas" element={<Lists width={mainWidth} />} />
           </Routes>
@@ -89,32 +89,46 @@ const ContactIcons = ({marginIcons}) => {
 function Navbar({width}) {
   const location = useLocation();
 
-  if (location.pathname === "/" || location.pathname === "/contacto") return null;
-  return(
-    <div style={{width: width, backgroundColor:"white", boxShadow:"var(--shadow-tefi)", margin:"1rem auto", padding:"1rem", display:"flex"}}>
-      <Link to="/botones">
-        <p style={{
-          backgroundColor: location.pathname === "/botones" ? "gray" : "transparent",
-          padding:"8px", 
-          width:"fit-content", 
-          borderRadius:"4px",
-          color:"var(--black-tefi)"
-        }}>
-          Botones
-        </p>
-      </Link>
+  if (location.pathname === "/" || location.pathname === "/quienes-somos") return null;
 
-      <Link to="/listas">
-        <p style={{
-          backgroundColor: location.pathname === "/listas" ? "gray" : "transparent",
-          padding:"8px", 
-          width:"fit-content", 
-          borderRadius:"4px",
-          color:"var(--black-tefi)"
-        }}>
-          Listas
-        </p>
-      </Link>
+  return(
+    <div style={{width: width, backgroundColor:"white", borderBottom:"2px solid #e9e9e9", margin:"0 auto", padding:"8px", display:"flex"}}>
+      <div style={{display:"flex", alignItems:"center"}}>
+        <img src="/svg/arrow.svg" alt="" style={{ transform:"rotate(180deg)" }} />
+      </div>
+      
+      <div style={{width:"100%", display:"flex", alignItems:"center"}}>
+        
+        <Link to="/botones">
+          <p style={{
+            backgroundColor: location.pathname === "/botones" ? "#e9e9e9" : "transparent",
+            padding:"8px", 
+            width:"fit-content", 
+            borderRadius:"4px",
+            color:"var(--black-tefi)",
+            margin:"0 8px"
+          }}>
+            Botones
+          </p>
+        </Link>
+
+        <Link to="/listas">
+          <p style={{
+            backgroundColor: location.pathname === "/listas" ? "#e9e9e9" : "transparent",
+            padding:"8px", 
+            width:"fit-content", 
+            borderRadius:"4px",
+            color:"var(--black-tefi)",
+            margin:"0 8px"
+          }}>
+            Listas
+          </p>
+        </Link>
+      </div>
+
+      <div style={{display:"flex", alignItems:"center"}}>
+        <img src="/svg/arrow.svg" alt="" />
+      </div>
     </div>
   )
 }

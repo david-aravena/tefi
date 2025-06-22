@@ -16,7 +16,7 @@ input[type="file"] {
     background-color: var(--green-tefi);
     border: none;
     border-radius: 15px;
-    padding: 15px;
+    padding: 8px;
     font-size: 16px;
     overflow: hidden;
     font-family: 'Roboto', sans-serif;

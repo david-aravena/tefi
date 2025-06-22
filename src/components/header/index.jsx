@@ -29,8 +29,8 @@ export default function Header({ padding }) {
       </div> 
 
         <div style={{display:"flex"}}>
-          {location.pathname !== "/contacto" && (
-            <Link to={"/contacto"}>
+          {location.pathname !== "/quienes-somos" && (
+            <Link to={"/quienes-somos"}>
               <h3 style={{color:"white"}}>Quienes somos</h3>
             </Link>
           )}
