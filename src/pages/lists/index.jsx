@@ -1,18 +1,16 @@
 import ListFiles from './components/listFiles/'
+import ListAccordion from './components/listAccordion/'
 import { Link } from 'react-router';
 
 export default function Lists({width}){
   return(
     <div style={{width: width}}>
-      <div style={{
-        width:"100%", 
-        backgroundColor:"white", 
-        boxShadow:"var(--shadow-tefi)", 
-        borderRadius:"10px", 
-        padding:"1rem 1rem", 
-        margin:"1rem 0"
-      }}>
+      <div className="containerList">
         <ListFiles />
+      </div>
+
+      <div className="containerList">
+        <ListAccordion  />
       </div>
     </div>
   )

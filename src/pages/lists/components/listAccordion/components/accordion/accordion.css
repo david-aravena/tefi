@@ -1,0 +1,35 @@
+.accordion {
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--pink);
+    border-radius: 4px;
+    margin: 1rem 0;
+    background: rgba(0, 0, 0, 0.5) url('/images/backgroundProperties.png') no-repeat;
+  }
+  
+  
+  .header {
+    padding: 10px;
+    cursor: pointer;
+    color: white;
+    font-family: var(--font-montserrat-regular), sans-serif;
+    font-weight: 400;
+  }
+  
+  .content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  
+  .content.open {
+    max-height: fit-content;
+    height: fit-content;
+    padding: 10px;
+    overflow: auto;
+  }
+  
+  .content.closing {
+    max-height: 0;
+    overflow: hidden;
+  }

@@ -1,0 +1,36 @@
+.cardLoading{
+    width: 200px;
+    height: 250px;
+    background: url("/images/logoCardLoading.png"), blue;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30%;
+    border: 1px solid blue;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    opacity: 0;
+    animation: ciclo 2s linear infinite;
+  }
+  
+  .cardLoading:nth-of-type(1) {
+    animation-delay: -2s;
+  }
+  .cardLoading:nth-of-type(2) {
+    animation-delay: -1.6s;
+  }
+  .cardLoading:nth-of-type(3) {
+    animation-delay: -1.2s;
+  }
+  .cardLoading:nth-of-type(4) {
+    animation-delay: -0.8s;
+  }
+  .cardLoading:nth-of-type(5) {
+    animation-delay: -0.4s;
+  }
+  
+  @keyframes ciclo {
+    0%   { opacity: 0.8; }
+    25%  { opacity: 0.8; }
+    50%  { opacity: 0; }
+    100% { opacity: 0; }
+  }
