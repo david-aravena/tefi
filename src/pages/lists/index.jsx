@@ -1,4 +1,4 @@
-import ListFiles from './listFiles'
+import ListFiles from './components/listFiles/'
 import { Link } from 'react-router';
 
 export default function Lists({width}){

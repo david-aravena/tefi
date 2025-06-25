@@ -7,7 +7,7 @@ import './App.css'
 const Home = lazy(() => import('./pages/home/'));
 const Nosotros = lazy(() => import('./components/nosotros/'));
 const Buttons = lazy(() => import('./components/buttons/'));
-const Lists = lazy(() => import('./components/lists/'));
+const Lists = lazy(() => import('./pages/lists/'));
 
 export default function App() {
 
