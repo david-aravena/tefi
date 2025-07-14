@@ -16,7 +16,7 @@ const Accordion = ({ title, children}) => {
   return (
     <div className="accordion">
       <div className="header" onClick={toggleOpen} style={{ cursor: 'pointer', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-        <p style={{ margin: 0 }}>{title}</p>
+        <p style={{ margin: 0, padding:"0 1rem" }}>{title}</p>
         <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ transform: `rotate(${arrowDirection === 'down' ? 0 : 180}deg)` }}>
           <path d="M1 1L6 6L11 1" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
         </svg>

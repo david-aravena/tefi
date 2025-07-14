@@ -1,15 +1,16 @@
 .cardLoading{
-    width: 200px;
+    width: 150px;
     height: 250px;
-    background: url("/images/logoCardLoading.png"), blue;
+    background: url("/images/corazonTefi.png"), rgb(255, 255, 255);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 30%;
-    border: 1px solid blue;
+    border: 2px solid var(--green-tefi);
     border-radius: 8px;
-    margin-bottom: 1rem;
+    margin: 1rem 8px;
     opacity: 0;
     animation: ciclo 2s linear infinite;
+    flex-shrink: 0;
   }
   
   .cardLoading:nth-of-type(1) {

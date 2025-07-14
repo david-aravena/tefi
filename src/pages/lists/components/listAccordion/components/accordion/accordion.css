@@ -4,7 +4,7 @@
     border: 1px solid var(--pink);
     border-radius: 4px;
     margin: 1rem 0;
-    background: rgba(0, 0, 0, 0.5) url('/images/backgroundProperties.png') no-repeat;
+    background: var(--black-tefi)
   }
   
   
@@ -25,7 +25,7 @@
   .content.open {
     max-height: fit-content;
     height: fit-content;
-    padding: 10px;
+    padding: 0 10px;
     overflow: auto;
   }
   
