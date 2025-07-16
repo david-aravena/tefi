@@ -40,6 +40,7 @@ export default function App() {
       </div>
 
       <div style={{position:"fixed", bottom:0, width:"100vw", background:"#4e2a6e",zIndex:"99999999"}}>
+
         <div style={{margin:"auto", width: isMobile ? "100%" : "85%", display:"flex", justifyContent:"flex-end"}}>
           <ContactIcons marginIcons="8px" />
         </div>
@@ -81,6 +82,18 @@ const ContactIcons = ({marginIcons}) => {
             style={{ width: '50px', height: '50px', objectFit: 'contain', borderRadius: "50px" }}
           />
         </a>
+      </div>
+
+      <div style={{margin: marginIcons, backgroundColor:"white", borderRadius:"50%"}}>
+        {location.pathname !== "/quienes-somos" && (
+          <Link to={"/quienes-somos"}>
+            <img
+            src="/public/svg/family.svg"
+            alt="email"
+            style={{ width: '50px', height: '50px', objectFit: 'contain', borderRadius: "50px" }}
+          />
+          </Link>
+        )}
       </div>
     </>
   )
