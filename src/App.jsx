@@ -42,7 +42,7 @@ export default function App() {
       <div style={{position:"fixed", bottom:0, width:"100vw", background:"#4e2a6e",zIndex:"99999999"}}>
 
         <div style={{margin:"auto", width: isMobile ? "100%" : "85%", display:"flex", justifyContent:"flex-end"}}>
-          <ContactIcons marginIcons="8px" />
+          <ContactIcons marginIcons="8px" isMobile={useIsMobile} />
         </div>
       </div>
     </>
@@ -61,7 +61,7 @@ function useIsMobile(breakpoint = 768) {
   return isMobile;
 }
 
-const ContactIcons = ({marginIcons}) => {
+const ContactIcons = ({marginIcons, isMobile}) => {
   return(
     <>
       <div style={{margin: marginIcons}}>
@@ -75,25 +75,13 @@ const ContactIcons = ({marginIcons}) => {
       </div>
         
       <div style={{margin: marginIcons}}>
-        <a href="https://wa.me/56990059578?text=Hola%20quiero%20informacion%20sobre%20el%20servicio%20que%20ofrecen" target="_blank" rel="noopener noreferrer">
+        <a href={isMobile() ? "https://wa.me/56990059578?text=Hola%20quiero%20informacion%20sobre%20el%20servicio%20que%20ofrecen" : "https://web.whatsapp.com/send?phone=56990059578&text=Hola%20quiero%20informacion"} target="_blank" rel="noopener noreferrer">
           <img
             src="https://play-lh.googleusercontent.com/bYtqbOcTYOlgc6gqZ2rwb8lptHuwlNE75zYJu6Bn076-hTmvd96HH-6v7S0YUAAJXoJN"
             alt="WhatsApp"
             style={{ width: '50px', height: '50px', objectFit: 'contain', borderRadius: "50px" }}
           />
         </a>
-      </div>
-
-      <div style={{margin: marginIcons, backgroundColor:"white", borderRadius:"50%"}}>
-        {location.pathname !== "/quienes-somos" && (
-          <Link to={"/quienes-somos"}>
-            <img
-            src="/public/svg/family.svg"
-            alt="email"
-            style={{ width: '50px', height: '50px', objectFit: 'contain', borderRadius: "50px" }}
-          />
-          </Link>
-        )}
       </div>
     </>
   )
