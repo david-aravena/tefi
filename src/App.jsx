@@ -39,9 +39,10 @@ export default function App() {
         </Suspense>
       </div>
 
-      <div style={{position:"fixed", bottom:0, width:"100vw", background:"#4e2a6e",zIndex:"99999999"}}>
+      <div style={{position:"fixed", bottom:0, width:"100vw", background:"#4e2a6e", zIndex:"99999999"}}>
 
-        <div style={{margin:"auto", width: isMobile ? "100%" : "85%", display:"flex", justifyContent:"flex-end"}}>
+        <div style={{margin:"auto", width: isMobile ? "100%" : "85%", display:"flex", justifyContent:"space-between", alignItems:"center"}}>
+          <Typewriter text={"Tefi es animación, diseño y desarrollo web."} speed={70} />
           <ContactIcons marginIcons="8px" isMobile={useIsMobile} />
         </div>
       </div>
@@ -63,7 +64,7 @@ function useIsMobile(breakpoint = 768) {
 
 const ContactIcons = ({marginIcons, isMobile}) => {
   return(
-    <>
+    <div style={{display:"flex"}}>
       <div style={{margin: marginIcons}}>
         <a href="mailto:tefi@tefi.cl?subject=Me%20interesa%20su%20servicio%20de%20logotipos&body=Hola" target="_blank" rel="noopener noreferrer">
           <img
@@ -83,7 +84,7 @@ const ContactIcons = ({marginIcons, isMobile}) => {
           />
         </a>
       </div>
-    </>
+    </div>
   )
 }
 
@@ -132,5 +133,26 @@ function Navbar({width}) {
       </div>
     </div>
   )
+}
+
+function Typewriter({ text, speed = 50 }) {
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    setIndex(0);
+    const interval = setInterval(() => {
+      setIndex((prev) => {
+        if (prev < text.length) {
+          return prev + 1;
+        } else {
+          clearInterval(interval);
+          return prev;
+        }
+      });
+    }, speed);
+    return () => clearInterval(interval);
+  }, [text, speed]);
+
+  return <p style={{color:"white", fontSize:"16px", fontStyle:"italic", margin:"0 8px"}}>{text.slice(0, index)}</p>;
 }
 

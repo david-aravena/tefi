@@ -25,15 +25,15 @@ export default function HamburgerMenu() {
         aria-label="Abrir menú"
       >
         <div style={{
-          width: 30, height: 8, background: "#ffffffff", margin: "4px 0", borderRadius: 2,
+          width: 30, height: 3, background: "#ffffffff", margin: "4px 0", borderRadius: 2,
           transition: "0.3s"
         }} />
         <div style={{
-          width: 30, height: 8, background: "#ffffffff", margin: "4px 0", borderRadius: 2,
+          width: 30, height: 3, background: "#ffffffff", margin: "4px 0", borderRadius: 2,
           transition: "0.3s"
         }} />
         <div style={{
-          width: 30, height: 8, background: "#ffffffff", margin: "4px 0", borderRadius: 2,
+          width: 30, height: 3, background: "#ffffffff", margin: "4px 0", borderRadius: 2,
           transition: "0.3s"
         }} />
       </button>
